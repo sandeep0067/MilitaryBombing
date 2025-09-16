@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-size: cover;
+            background-image: url('https://images.unsplash.com/photo-1534154347132-a7ac6fe8085e?q=80&w=1075&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        }
+        #title{
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-size: 40px;
+
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        p{
+            text-align: center;
+            color: rgb(209, 62, 9);
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title"><ul>Millitary Base</ul></h1>
+    <button onclick="changed()">click me!</button>
+    <p>hello Commrade!</p>
+    <button onclick="colorchange()">click me!</button>
+    <div class="bold">boom</div>
+    <div class="bold">boom</div>
+       <button onclick="warning()">warning alert</button>
+ <button onclick="booming();image()">boomb</button>
+    
+    <script>
+
+       function changed(){
+            document.getElementById("title").innerHTML="Starting of DOC";
+        }
+        function colorchange(){
+            var p=document.getElementsByTagName("p");
+            p[0].style.color="Green";
+            p[0].style.fontSize="30px";
+        }
+        function booming(){
+            var booms=document.getElementsByClassName("bold");
+            for(var i=0;i<booms.length;i++){
+                booms[i].style.fontWeight="bold";
+                booms[i].style.color="rgb(255,0,0)";
+            }
+        }
+        function warning(){
+            document.getElementsByClassName("bold")[0].innerHTML="<h1>warning</h1>"+
+           " <p>this is a warning</p>";
+           document.getElementsByClassName("bold")[1].innerHTML="<h1>Bombing</h1>";
+        }
+        function image(){
+            
+            document.body.style.backgroundImage="url('https://media.istockphoto.com/id/470309868/photo/explosion-nuclear-bomb-in-ocean.jpg?s=612x612&w=0&k=20&c=gA9WPuNBPkpox4bNZcPBit-A0HkxmTpYsHKYlNiX8z8=')";
+            document.body.style.backgroundSize="cover";
+        }
+
+    </script>
+</body>
+</html>
